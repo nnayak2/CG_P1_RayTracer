@@ -1,0 +1,40 @@
+1. Arbitrarily sized images and interface windows 
+
+read window.txt file for window parameters.
+p x y
+w x y
+where p is pixel width and height, and w is world width and height of screen.
+
+
+2. arbitrary viewing setups:
+
+read view.txt file for camera parameters.
+Format as follows:
+e x y z
+l x y z
+u x y z
+n x
+f x
+where order is eye, look, up, near and far plane.
+
+
+3. multiple lights at arbitrary locations:
+
+Read lights.txt file for lights. Each light should have following 5 parameters in order given below.
+p x y z
+a r g b
+d r g b
+s r g b
+The values correspond to position, ambient, diffuse, specular.
+
+
+4. Multi threading: (If it can be claimed for credit)
+
+If the screen can be divided into 4 integral quarters, the intersection routine runs on 4 threads to render frame faster.
+
+
+Notes:
+a. world width and height and znear determine FOV.
+b. look and up have to be orthogonal to each other.
+c.if file not found,stick to assignment defaults.
+d. file parsing does not have error checking enabled, so it could result in unexpected behavior if files are not correct.
